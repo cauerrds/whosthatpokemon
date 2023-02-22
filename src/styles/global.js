@@ -8,14 +8,17 @@ const GlobalStyle = createGlobalStyle`
 	--PokemonBlue: #3B4CCA;
     --PokemonDarkRed:#CC0000 ;
     --PokemonLightRed: #FF0000 ;
+	position: relative;
 }
+
 
 
 body {
 	height: 100vh;
 	width: 100vw;
     margin: 0;
-    padding: 0;
+    
+	
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,

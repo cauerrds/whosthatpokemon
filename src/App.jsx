@@ -8,13 +8,15 @@ import { LangaugeModal } from './components/languageModal/languageModal';
 
 const App = () => {
   return (
-    <>
+
+    <div className='App'>
       <LangaugeModal/>
       <Header/>
       <DifficultyModal/>
       <Game/>
       <Footer/>
-    </>
+    </div>
+ 
   )
     
 };
