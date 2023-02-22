@@ -34,6 +34,8 @@ const Game = ()=>{
     const validateName = (typedPokemonName, hiddenPokemonName)=>{
         let similarity = 0;
         const nameLength = hiddenPokemonName.length;
+        typedPokemonName = typedPokemonName.toLowerCase()
+        hiddenPokemonName = hiddenPokemonName.toLowerCase()
         
 
         for (let i = 0; i < nameLength; i++) {
@@ -61,7 +63,6 @@ const Game = ()=>{
             case "easy":
                 const similarityIsAbove70 = similarity > 0.70
                 if (similarityIsAbove70) {
-                    console.log("Entrou em easy");
                     dispatch(saveGameData({pokemonId, points, pokemon}))                    
                 } else {
                     points = 0
@@ -73,7 +74,6 @@ const Game = ()=>{
             case "medium":
                 const similarityIsAbove85 = similarity > 0.85
                 if (similarityIsAbove85) {
-                    console.log("Entrou em medium");
                     dispatch(saveGameData({pokemonId, points, pokemon}))                    
                 } else {
                     points = 0
@@ -82,9 +82,8 @@ const Game = ()=>{
                 }
                 break;
             default:
-                const isSimiliar = similarity === 1
+                const isSimiliar = similarity == 1
                 if (isSimiliar) {
-                    console.log("Entrou em hard");
                     dispatch(saveGameData({pokemonId, points, pokemon}))                    
                 } else {
                     points = 0
