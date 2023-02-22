@@ -47,7 +47,6 @@ export const StyledInput = styled.div`
         width: 100%;
         display: flex;
         align-items: center;
-        padding-right: 5px;
             &:focus-within {
                 border: 2px solid #070707;
             }
@@ -86,15 +85,15 @@ export const StyledInput = styled.div`
         }
 
         button{
+            height: 100%;
             background-color: transparent;
             border: none;
             padding: 10px;
             cursor: pointer;
 
             :hover{
-                svg{
-                    color: #fefefe;
-                }
+                opacity: 0.5;
+                background-color: #fefefe;         
             }
         }
     }
