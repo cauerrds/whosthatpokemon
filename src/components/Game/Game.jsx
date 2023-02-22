@@ -19,6 +19,7 @@ const Game = ()=>{
     const {data, loading, isSuccess } = useSelector((state)=> state.pokemonsList)
     const gameData = useSelector((state)=> state.gameData)
     const difficulty = useSelector((state) => state.difficultyOptions.difficulty)
+    const language = useSelector((state) => state.language.language)
   
     
     const getRandomPokemon = (previousIds)=>{ 
@@ -144,6 +145,10 @@ const Game = ()=>{
         )
     }
     
+    let pokemonName = "Pokémon's name"
+    if(language == "PT/BR"){
+        pokemonName = "Quem é esse Pokémon?"
+    }
 
     return(
         <Container>
@@ -154,7 +159,7 @@ const Game = ()=>{
             <StyledInput>
                 <form onSubmit={handleSubmit(onSubmitFnc)}>
                     <div className="inputContainer">
-                        <input  {...register("pokemonName")} name="pokemonName" placeholder="Pokémon's name"/>
+                        <input  {...register("pokemonName")} name="pokemonName" placeholder={pokemonName}/>
                         <button  type="submit">< MdSend/></button>           
                     </div>
                 </form>

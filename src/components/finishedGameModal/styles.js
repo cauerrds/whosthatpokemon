@@ -30,6 +30,7 @@ export const Content = styled.div`
             font-size: 22px;
             text-align: center;
             color: #fefefe;
+            margin-bottom: 15px;
         }
 `
 

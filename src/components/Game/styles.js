@@ -82,12 +82,20 @@ export const StyledInput = styled.div`
             width: 20px;
             height: 20px;
             color: #4C4D4F;
-            cursor: pointer;
+
         }
 
         button{
             background-color: transparent;
             border: none;
+            padding: 10px;
+            cursor: pointer;
+
+            :hover{
+                svg{
+                    color: #fefefe;
+                }
+            }
         }
     }
 `
