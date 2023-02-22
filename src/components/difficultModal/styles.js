@@ -39,9 +39,20 @@ export const DifficultButton = styled.button`
     border-radius: 4px;
     background-color: #343541;
     color: white; 
-
+    display: flex;
+    align-items: center;
     :hover{
         cursor: pointer;
         border: 2px solid #fefefe;
     }
+    span{
+        flex-grow: 1;
+    }
+
+    svg{
+        :hover{
+            cursor: help;
+        }
+    }
+
 `

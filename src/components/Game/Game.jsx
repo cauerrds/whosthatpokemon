@@ -159,7 +159,7 @@ const Game = ()=>{
             <StyledInput>
                 <form onSubmit={handleSubmit(onSubmitFnc)}>
                     <div className="inputContainer">
-                        <input  {...register("pokemonName")} name="pokemonName" placeholder={pokemonName}/>
+                        <input id="gameInput" {...register("pokemonName")} name="pokemonName" placeholder={pokemonName}/>
                         <button  type="submit">< MdSend/></button>           
                     </div>
                 </form>

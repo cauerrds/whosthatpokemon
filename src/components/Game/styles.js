@@ -51,7 +51,7 @@ export const StyledInput = styled.div`
             &:focus-within {
                 border: 2px solid #070707;
             }
-        input {
+        input {  
         font-weight: 600;
         outline: none;
         width: 100%;
