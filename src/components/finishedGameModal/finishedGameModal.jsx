@@ -18,8 +18,14 @@ const FinishedGameModal = ({setFinishedGame})=>{
             const name = pokemon.name.substring(1)
             const pokemonName = firstChar + name
             return (
-                <div>
+                <div key={i}>
                     <img src={pokemon.img} />
+                    <img src="" style={{  
+                        backgroundImage: "url(" + pokemon.img + ")",
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat'
+                        }} />
                     <span className="legend">{pokemon.name}</span>
                 </div>
             )
