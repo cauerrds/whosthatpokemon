@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux";
 import { Container } from "./styles";
-import logo from "../../assets/WhosThatPokemon.png"
 
 const Header = () =>{
 
