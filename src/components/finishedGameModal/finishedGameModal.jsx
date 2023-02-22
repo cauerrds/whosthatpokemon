@@ -20,12 +20,13 @@ const FinishedGameModal = ({setFinishedGame})=>{
             return (
                 <div key={i}>
                     <img src={pokemon.img} />
-                    <img src="" style={{  
+                    <div className="imgDiv" style={{  
                         backgroundImage: "url(" + pokemon.img + ")",
                         backgroundPosition: 'center',
                         backgroundSize: 'cover',
                         backgroundRepeat: 'no-repeat'
-                        }} />
+                        }}>
+                    </div>
                     <span className="legend">{pokemon.name}</span>
                 </div>
             )

@@ -47,7 +47,7 @@ export const GameStatus = styled.div`
 export const PokemonList = styled.div`
 
         
-        img{
+        .imgDiv{
                 max-width: 250px;
         }
         .legend{
