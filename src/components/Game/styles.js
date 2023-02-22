@@ -25,6 +25,11 @@ export const ContainerImg = styled.div`
             width: 280px;
             height: 280px;
             filter: brightness(0);
+            -webkit-user-drag: none;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
         }
 
 `
