@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { reset } from "../../features/gameSlice"
 import { PokemonCard } from "../pokemonCard/pokemonCard";
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { Container, Content, GameResume, PokemonList, GameStatus, StyledButton } from "./styles";
 
 const FinishedGameModal = ({setFinishedGame})=>{
@@ -16,7 +18,10 @@ const FinishedGameModal = ({setFinishedGame})=>{
             const name = pokemon.name.substring(1)
             const pokemonName = firstChar + name
             return (
-                <PokemonCard key={i} name={pokemonName} img={pokemon.img} points={pokemon.points}/>
+                <div>
+                    <img src={pokemon.img} />
+                    <span className="legend">{pokemon.name}</span>
+                </div>
             )
         })
         return cardlist
@@ -45,7 +50,9 @@ const FinishedGameModal = ({setFinishedGame})=>{
                 <h1>{result}</h1>
                 <GameStatus>
                     <PokemonList>
-                        {getListedPokemons(gameData.previousPokemons)}
+                        <Carousel swipeScrollTolerance={15} showThumbs={false} showStatus={false} infiniteLoop={true} centerMode={true} centerSlidePercentage={50} emulateTouch={true}>
+                             {getListedPokemons(gameData.previousPokemons)}
+                        </Carousel>
                     </PokemonList>
                     <GameResume>
                         <div>

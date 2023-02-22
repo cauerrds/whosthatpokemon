@@ -12,16 +12,20 @@ export const Container = styled.div`
 `
 
 export const Content = styled.div`
+        
         margin: auto;
-        height: 360px;
         width: 300px ;
         padding: 10px 5px 10px 5px;
         margin-top: 80px;
-        border: none;
+        border: 1px solid #fefefe;
         border-radius: 4px;
         background-color: #202123;
         display: flex;
         flex-direction: column;
+
+        @media (min-width: 768px) {
+        width: 500px;
+         }
         h1{
             font-size: 22px;
             text-align: center;
@@ -30,26 +34,41 @@ export const Content = styled.div`
 `
 
 export const GameStatus = styled.div`
+        
         margin: auto;
         width: 100%;
         border: none;
         border-radius: 4px;
         display: flex;
+        flex-direction: column;
 `
 
 export const PokemonList = styled.div`
-        width: 150px;
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        justify-content: center;
-        align-items: center;
+
+        
+        img{
+                max-width: 250px;
+        }
+        .legend{
+                position: absolute;
+                top: -10px;
+                background: transparent !important; 
+                color: #fefefe ;
+                opacity: 1 !important;
+                
+                @media (min-width: 768px) {
+                        font-size: 18px !important;
+                }
+
+        }
+
+       width: 100%;
+
 `
 
 export const GameResume = styled.div`
-        width: 150px;
+        width: 100%;
         display: flex;
-        flex-direction: column;
         justify-content: space-around;
 
         div{
@@ -70,6 +89,8 @@ export const GameResume = styled.div`
 
 export const StyledButton = styled.button`
     width: 100%;
+    margin: auto;
+    max-width: 400px;
     height: 40px;
     margin-top: 5px;
     text-align: center;
