@@ -1,6 +1,6 @@
 How to play:
 
-step 1: \n
+step 1: <br>
 ![image](https://user-images.githubusercontent.com/95306492/224124929-f2d3bfa4-148a-4f89-8301-031d097ecdd1.png)
 
 step 2: \n
